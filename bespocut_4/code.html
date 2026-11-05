@@ -1,0 +1,654 @@
+<!DOCTYPE html><html class="h-full bg-background text-on-background" dir="rtl" lang="he"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BESPOCUT | סל קניות וקופה מהירה</title>
+<!-- Google Fonts: Rubik & Space Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#281800",
+            "inverse-primary": "#c7c6ca",
+            "tertiary-container": "#281800",
+            "background": "#faf9f7",
+            "surface-tint": "#5e5e62",
+            "primary": "#000000",
+            "on-tertiary-container": "#9a805b",
+            "outline": "#76777b",
+            "tertiary-fixed-dim": "#e0c298",
+            "surface": "#faf9f7",
+            "primary-fixed-dim": "#c7c6ca",
+            "secondary-container": "#e1e2ea",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#e3e2e0",
+            "secondary": "#5c5e65",
+            "surface-container-low": "#f4f3f1",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#191c21",
+            "on-tertiary-fixed-variant": "#584323",
+            "on-secondary-fixed-variant": "#44474d",
+            "surface-variant": "#e3e2e0",
+            "secondary-fixed": "#e1e2ea",
+            "on-primary-container": "#848387",
+            "on-background": "#1a1c1b",
+            "on-primary-fixed": "#1b1b1f",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#e9e8e6",
+            "error-container": "#ffdad6",
+            "tertiary": "#000000",
+            "on-surface-variant": "#46464b",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#c7c6cb",
+            "primary-container": "#1b1b1f",
+            "on-secondary-container": "#62646b",
+            "primary-fixed": "#e3e2e6",
+            "on-primary-fixed-variant": "#46464a",
+            "inverse-surface": "#2f3130",
+            "surface-container": "#efeeec",
+            "secondary-fixed-dim": "#c5c6ce",
+            "on-surface": "#1a1c1b",
+            "tertiary-fixed": "#fedeb2",
+            "surface-bright": "#faf9f7",
+            "surface-dim": "#dadad8",
+            "inverse-on-surface": "#f1f1ef"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-mobile": "0.75rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1rem",
+            "margin": "3rem",
+            "space-xl": "4rem",
+            "space-lg": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "display-hero-mobile": [
+              "Rubik"
+            ],
+            "headline-lg": [
+              "Rubik"
+            ],
+            "headline-lg-mobile": [
+              "Rubik"
+            ],
+            "body-lg": [
+              "Rubik"
+            ],
+            "display-hero": [
+              "Rubik"
+            ],
+            "headline-md": [
+              "Rubik"
+            ],
+            "label-caps": [
+              "Space Grotesk"
+            ],
+            "body-sm": [
+              "Rubik"
+            ],
+            "label-price": [
+              "Space Grotesk"
+            ],
+            "headline-sm": [
+              "Rubik"
+            ],
+            "body-md": [
+              "Rubik"
+            ]
+          },
+          "fontSize": {
+            "display-hero-mobile": [
+              "36px",
+              {
+                "lineHeight": "42px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "900"
+              }
+            ],
+            "headline-lg": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "800"
+              }
+            ],
+            "headline-lg-mobile": [
+              "26px",
+              {
+                "lineHeight": "32px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "800"
+              }
+            ],
+            "body-lg": [
+              "16px",
+              {
+                "lineHeight": "26px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }
+            ],
+            "display-hero": [
+              "56px",
+              {
+                "lineHeight": "64px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "900"
+              }
+            ],
+            "headline-md": [
+              "24px",
+              {
+                "lineHeight": "30px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "700"
+              }
+            ],
+            "label-caps": [
+              "11px",
+              {
+                "lineHeight": "14px",
+                "letterSpacing": "0.14em",
+                "fontWeight": "700"
+              }
+            ],
+            "body-sm": [
+              "12px",
+              {
+                "lineHeight": "18px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "label-price": [
+              "15px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-sm": [
+              "18px",
+              {
+                "lineHeight": "24px",
+                "letterSpacing": "0em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-md": [
+              "14px",
+              {
+                "lineHeight": "22px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #c7c6cb;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-background font-body-md text-body-md text-on-background antialiased selection:bg-primary selection:text-surface">
+<!-- TopNavBar (Derived verbatim from Shared Components JSON) -->
+<nav class="sticky top-0 w-full z-50 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 transition-all duration-300">
+<div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin flex items-center justify-between h-20 rtl">
+<!-- Right: Brand Logo -->
+<div class="flex items-center gap-6">
+<a class="text-headline-md font-headline-md tracking-tight font-extrabold text-on-surface dark:text-inverse-on-surface flex items-center gap-2 group" href="#">
+<span class="text-primary tracking-tighter">מעמד ישיבתי</span>
+<span class="text-xs px-2 py-0.5 bg-primary text-on-primary font-label-caps tracking-widest align-middle">BESPOCUT</span>
+</a>
+</div>
+<!-- Center: Navigation Links -->
+<div class="hidden lg:flex items-center gap-8 rtl">
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#home">
+דף הבית
+</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#clothing">
+חדר ביגוד
+</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#tzitza">
+חדר צצ״א
+</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#sales">
+מכירות
+</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#stores">
+הסדרי חנויות
+</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#about">
+אודות
+</a>
+</div>
+<!-- Left: Search, Account & Basket Cluster -->
+<div class="flex items-center gap-4">
+<!-- Minimal Search Box -->
+<div class="relative hidden sm:block">
+<input class="w-52 lg:w-64 bg-surface-container-low border border-outline-variant/40 py-1.5 pr-8 pl-3 text-body-sm font-body-sm focus:outline-none focus:border-primary transition-all duration-200" placeholder="חיפוש פריט, גזרה או מידה..." type="text">
+<span class="material-symbols-outlined absolute right-2 top-2 text-[18px] text-on-surface-variant pointer-events-none">search</span>
+</div>
+<!-- Trailing Icon Actions -->
+<a class="p-2 text-on-surface hover:text-secondary-fixed-dim transition-colors duration-200 relative" href="#" title="מועדפים">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</a>
+<a class="p-2 text-primary hover:text-secondary-fixed-dim transition-colors duration-200 relative" href="#" title="סל קניות">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="absolute top-1 -right-0.5 w-4 h-4 rounded-full bg-primary text-on-primary text-[10px] font-label-price flex items-center justify-center font-bold">3</span>
+</a>
+<a class="hidden md:flex items-center gap-1 py-1.5 px-3 border border-primary text-primary text-body-sm font-headline-sm hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span class="">התחברות</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Editorial Breadcrumb & Notification Banner -->
+
+<!-- Main Content Layout: 12-Column Editorial Grid -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-space-md md:px-space-lg py-8 md:py-12">
+<!-- Page Header Tier -->
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between border-b border-primary pb-6 gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">CART &amp; CHECKOUT OVERVIEW</span>
+<h1 class="font-display-hero-mobile md:font-headline-lg text-display-hero-mobile md:text-headline-lg tracking-tight text-primary">
+          עגלת קניות ורכישה מהירה
+        </h1>
+</div>
+<div class="flex items-center gap-2 text-secondary font-body-md text-body-md"><span class="">3 פריטים נבחרו</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-semibold">איסוף עצמי מסניפי הרשת או מנקודת החלוקה בישיבה</span></div>
+</div>
+<!-- Two-Column Asymmetric Checkout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+<!-- Right Column: Cart Item Listings & Quick Add Rack (Cols 1-7 in RTL) -->
+<section class="lg:col-span-7 flex flex-col gap-8 order-1">
+<!-- Cart Items List Container -->
+<div class="flex flex-col divide-y divide-outline-variant border-t border-outline-variant">
+<!-- Item 1: חליפת שבת שחורה -->
+<article class="py-6 flex flex-col sm:flex-row gap-5 items-start sm:items-center justify-between group">
+<div class="flex items-start gap-4 sm:gap-6 w-full sm:w-auto">
+<!-- Garment Thumbnail (3:4 ratio editorial style) -->
+<div class="w-24 h-32 sm:w-28 sm:h-36 bg-surface-container-high flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Editorial close-up of a luxurious deep matte black two-piece wool suit tailored for formal occasions, hung neatly against an off-white textured backdrop. The lighting is soft and focused, accentuating the ultra-fine weave of Super 130S wool with sharp, pristine lapel architecture and minimalist horn buttons in monochrome style." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfzb9WBaq-eiJ4IyW4MtXcitaCB9EzYTtKVY1nkACXHpVI05OHxO60iP-kDUe57QIa5LEndyG-BYDRKOpxDf2Lohg5fDPFJsha-IarswPDiU2ujkVGcljkT2-bCNLW3JccdbfW6F16LrX5wzZOaTGsv4uk-mb5LSV-94Ak9SPhtb-pfDNJnFeP8loNaSpHMRzsWSuH7I0O1Ng8_oTwj6aq7hSh1NKFJAMj4Y8GqJrqMXv69o7CTisz">
+<div class="absolute top-1.5 right-1.5 bg-primary text-surface text-[10px] font-label-caps px-1.5 py-0.5 tracking-wider uppercase font-semibold">
+                  SUPER 130'S
+                </div>
+</div>
+<!-- Specs Tier -->
+<div class="flex flex-col justify-between self-stretch py-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">
+                    חליפת שבת שחורה 2 חלקים Super 130'S
+                  </h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                    מידה: 48 (דרופ 6) | גזרה: קלאסית מחטבת | בטנת ויסקוזה נושמת
+                  </p>
+<p class="font-label-caps text-xs text-outline mt-1 uppercase tracking-wider">
+                    מק״ט: BC-7721-BLK
+                  </p>
+</div>
+<!-- Price mobile & stock notice -->
+<div class="mt-3 flex items-center gap-3">
+<span class="inline-flex items-center gap-1 font-body-sm text-[12px] text-primary bg-surface-container-high px-2 py-0.5">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> במלאי הישיבתי
+                  </span>
+</div>
+</div>
+</div>
+<!-- Quantity & Total Column -->
+<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-4 pt-2 sm:pt-0">
+<div class="font-label-price text-label-price text-primary font-bold text-lg">
+                ₪890
+              </div>
+<!-- Stepper selector (Zero border radius, sharp) -->
+<div class="flex items-center border border-primary">
+<button aria-label="הפחת כמות" class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest transition-colors text-primary" type="button">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-label-caps text-sm font-semibold">1</span>
+<button aria-label="הוסף כמות" class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest transition-colors text-primary" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<!-- Remove Action -->
+<button class="text-outline hover:text-error transition-colors flex items-center gap-1 font-body-sm text-xs underline decoration-outline-variant" type="button">
+<span class="material-symbols-outlined text-sm">delete</span>
+                הסר
+              </button>
+</div>
+</article>
+<!-- Item 2: חולצות כותנה Non-Iron Twill -->
+<article class="py-6 flex flex-col sm:flex-row gap-5 items-start sm:items-center justify-between group">
+<div class="flex items-start gap-4 sm:gap-6 w-full sm:w-auto">
+<div class="w-24 h-32 sm:w-28 sm:h-36 bg-surface-container-high flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Two crisp, pristine white pinpoint twill non-iron shirts neatly folded and stacked on a stark, minimalist marble stone shelf. High-contrast studio lighting highlights the sharp spread collar, immaculate stitch detailing, and mother-of-pearl buttons under a sophisticated black and ivory editorial aesthetic." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA6JTL3bSxZts8k7rGzkQOxWjoA-KGrMziKgHbZ_-bxRlpUMZwXXwPYlCcZ8G3KusDZ42BC0U6rLug94mL26C7Wt_qhikUldLR_v6rJqoVtlCXYlGvEdZOSMxLsPD5Ofzu_lk1AYwh96QCmsvqT9ovdaOryLfgKxDsxtGxZzOaVj4U4qYMVhoyQXGG_WnDq3ymEF8jt9KqJ0uepivedKphKK_kQZMDaqPE7H5zf_oNV_8n5WoazQfh">
+<div class="absolute top-1.5 right-1.5 bg-surface-container-highest text-primary text-[10px] font-label-caps px-1.5 py-0.5 tracking-wider font-semibold border border-outline-variant">
+                  SET OF 2
+                </div>
+</div>
+<div class="flex flex-col justify-between self-stretch py-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">
+                    2 חולצות כותנה Non-Iron Twill
+                  </h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                    מידה: 15.5 (39-40) | 100% כותנה מצרית איכותית | צווארון איטלקי קשיח
+                  </p>
+<p class="font-label-caps text-xs text-outline mt-1 uppercase tracking-wider">
+                    מק״ט: BC-4010-WHT
+                  </p>
+</div>
+<div class="mt-3 flex items-center gap-2">
+<span class="bg-surface-container-high text-primary font-body-sm text-[12px] px-2 py-0.5">
+                    מחיר מבצע זוגי מיוחד
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-4 pt-2 sm:pt-0">
+<div class="font-label-price text-label-price text-primary font-bold text-lg">
+                ₪300
+              </div>
+<div class="flex items-center border border-primary">
+<button aria-label="הפחת כמות" class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest transition-colors text-primary" type="button">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-label-caps text-sm font-semibold">1</span>
+<button aria-label="הוסף כמות" class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest transition-colors text-primary" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="text-outline hover:text-error transition-colors flex items-center gap-1 font-body-sm text-xs underline decoration-outline-variant" type="button">
+<span class="material-symbols-outlined text-sm">delete</span>
+                הסר
+              </button>
+</div>
+</article>
+<!-- Item 3: ציצית צמר רחלי מהודרת -->
+<article class="py-6 flex flex-col sm:flex-row gap-5 items-start sm:items-center justify-between group">
+<div class="flex items-start gap-4 sm:gap-6 w-full sm:w-auto">
+<div class="w-24 h-32 sm:w-28 sm:h-36 bg-surface-container-high flex-shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A luxurious traditional Jewish pure virgin wool Tzitzit garment carefully displayed on a natural oat linen fabric background. Architectural high-fashion lighting catches the dense, fine wool texture, hand-spun corner fringes with precise traditional knots, and reinforced corners in an uncompromisingly clean monochrome layout." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF7hd-d93iykC0gaOL4hGbaqwF2qWJAU-IppI19RH1CgaMQ7sRaDZB_-nNLYk9X9zy8L_Q0x8jyu6psIImoU_IH6WiF46HhZfNEOYMjRkHk4MfbeiLxhVjl3kXbwyKV6AR34w_f3LtQaYB7aLj0r0FoDuPOPJUrnSaXgEWhfVGW_qqxQXv2sJahNpgl7pyHuWrpX6A8VKsgeIgkdgoiTCu0nE2FeJDAW8-I6txd7XK99dvopZ5c_nW">
+<div class="absolute top-1.5 right-1.5 bg-primary text-surface text-[10px] font-label-caps px-1.5 py-0.5 tracking-wider uppercase font-semibold">
+                  צמר טהור
+                </div>
+</div>
+<div class="flex flex-col justify-between self-stretch py-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">
+                    ציצית צמר רחלי מהודרת
+                  </h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                    מידה: 55 | חוטים עבים עבודת יד | קשירה: אשכנז מהודר (חב״ד/בריסק)
+                  </p>
+<p class="font-label-caps text-xs text-outline mt-1 uppercase tracking-wider">
+                    מק״ט: BC-9904-WOL
+                  </p>
+</div>
+<div class="mt-3 flex items-center gap-2">
+<span class="font-body-sm text-xs text-secondary">
+                    בהשגחת בד״ץ העדה החרדית
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-4 pt-2 sm:pt-0">
+<div class="font-label-price text-label-price text-primary font-bold text-lg">
+                ₪135
+              </div>
+<div class="flex items-center border border-primary">
+<button aria-label="הפחת כמות" class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest transition-colors text-primary" type="button">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-label-caps text-sm font-semibold">1</span>
+<button aria-label="הוסף כמות" class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest transition-colors text-primary" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="text-outline hover:text-error transition-colors flex items-center gap-1 font-body-sm text-xs underline decoration-outline-variant" type="button">
+<span class="material-symbols-outlined text-sm">delete</span>
+                הסר
+              </button>
+</div>
+</article>
+</div>
+<!-- Quick Complementary Additions (Cross-sell Bento Row) -->
+<div class="mt-4 pt-6 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-4">
+<h3 class="font-headline-sm text-headline-sm tracking-tight text-primary">
+              פריטים משלימים להזמנה
+            </h3>
+<span class="font-label-caps text-xs text-secondary tracking-widest uppercase">QUICK ADDITIONS</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Addon 1: גרבי כותנה מחוזקות -->
+<div class="border border-outline-variant p-4 bg-surface flex items-center justify-between hover:border-primary transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-14 h-16 bg-surface-container-high overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Editorial product shot of three pairs of premium black reinforced cotton dress socks folded neatly beside an architectural textured stone block. Soft daylight, clean lines, and deep black fabric weave demonstrating durability and luxury tailoring in high-contrast aesthetic." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhkq2BgktnhTuo329o3pUFFqF5Zmf4GcNPbVQYOlvZNpXdvtjkXgFRXEucrOUV1LvF1_s9TYOLHOpzEmA-UUTMFwhjCr29QuqLW-zdbg5prMf8EDcRu3_L7mNeZNqdIhs-zMOEY8K04SCt2GQDDfoJZ9EequhwWRrckgS7Fh0pioniacP3E7ld3mc-DMP0m8UDHIz6z0GZJ1UphSHNXlkxD7wsJCYaepOVCM3_bW3RWE4tKD5hkRh5">
+</div>
+<div>
+<h4 class="font-headline-sm text-sm font-semibold text-primary">גרבי כותנה מחוזקות (מארז 3)</h4>
+<p class="font-body-sm text-xs text-secondary mt-0.5">עמידות כפולה לעמידה ממושכת</p>
+<p class="font-label-price text-sm text-primary font-bold mt-1">₪45</p>
+</div>
+</div>
+<button class="px-3 py-2 border border-primary text-primary hover:bg-primary hover:text-surface text-xs font-semibold tracking-wider transition-colors" type="button">
+                + הוסף
+              </button>
+</div>
+<!-- Addon 2: עניבת משי שחורה -->
+<div class="border border-outline-variant p-4 bg-surface flex items-center justify-between hover:border-primary transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-14 h-16 bg-surface-container-high overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Minimalist luxury studio capture of an immaculate black woven Italian silk tie gently rolled against a parchment paper background. Subtle sheen from side key light highlighting the delicate jacquard weave and tailored craftsmanship." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw-KDU5xQFl6ssoBPj3immhKsMvaPmE4YUmV7iIELjyrtqpEqaykaN7dobtrtad7-jij-BST-iSzrQ62ZS40IkhReEtXrlVxCmRC-7pBi2NEw6ca9dCHecfBCPCWr8zLFvE-0_yugdYoghAh9wzHa6SiMnIwFO8-BIh2dnLtgA3dKxpqNx7ojF8lRgog-vQUvHiAR6rFnVnwgVFatdlbKSlF6WEWJUoYUjuxEjYyI01FA59r583K9K">
+</div>
+<div>
+<h4 class="font-headline-sm text-sm font-semibold text-primary">עניבת משי שחורה 7 ס״מ</h4>
+<p class="font-body-sm text-xs text-secondary mt-0.5">100% משי איטלקי מט</p>
+<p class="font-label-price text-sm text-primary font-bold mt-1">₪79</p>
+</div>
+</div>
+<button class="px-3 py-2 border border-primary text-primary hover:bg-primary hover:text-surface text-xs font-semibold tracking-wider transition-colors" type="button">
+                + הוסף
+              </button>
+</div>
+</div>
+</div>
+<!-- Yeshiva Delivery Details Box -->
+<div class="bg-surface-container-low border border-outline-variant/60 p-5 mt-2"><div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">storefront</span>
+<div>
+<h4 class="font-headline-sm text-sm font-bold text-primary">איסוף עצמי וחלוקה מרוכזת בהיכל הישיבה</h4>
+<p class="font-body-md text-sm text-secondary mt-1">
+                איסוף מהיר בכל סניפי הרשת, או חלוקה מרוכזת ומאובטחת בהיכל הישיבה בתיאום מול נציג ועד הישיבה ללא תוספת תשלום.
+              </p>
+</div>
+</div></div>
+</section>
+<!-- Left Column: Order Summary, Coupon, Big CTA & Warranties (Cols 8-12 in RTL) -->
+<section class="lg:col-span-5 order-2">
+<div class="bg-surface border border-primary p-6 sm:p-8 sticky top-28">
+<div class="border-b border-outline-variant pb-4 mb-6">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight font-bold">
+              סיכום הזמנה
+            </h2>
+<p class="font-body-sm text-secondary mt-0.5">סגירה מהירה ומאובטחת בתקן PCI-DSS</p>
+</div>
+<!-- Coupon Code / Vaad Code Input -->
+<div class="mb-6">
+<label class="block font-headline-sm text-xs text-primary font-semibold mb-2" for="coupon-code">
+              קוד קופון / הנחת ועד ישיבה
+            </label>
+<div class="flex gap-2">
+<input class="w-full bg-surface-container-lowest border border-outline text-primary text-sm px-3.5 py-2.5 focus:border-primary focus:ring-0 rounded-none placeholder:text-outline/70" id="coupon-code" placeholder="הזן קוד (למשל: ועד_חברון / חתן_VIP)" type="text">
+<button class="px-5 py-2.5 bg-primary text-surface font-label-caps text-xs tracking-wider uppercase font-semibold hover:bg-surface-variant hover:text-primary border border-primary transition-colors flex-shrink-0" type="button">
+                החל
+              </button>
+</div>
+<p class="font-body-sm text-[11px] text-secondary mt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+              הנחות ועד ישיבה מוזנות ומאומתות אוטומטית לפי שם הישיבה
+            </p>
+</div>
+<!-- Cost Breakdown List -->
+<div class="space-y-3.5 border-t border-outline-variant pt-5 mb-6">
+<div class="flex justify-between items-center text-body-md font-body-md text-secondary">
+<span class="">סיכום ביניים פריטים</span>
+<span class="font-label-price text-on-background font-semibold">₪1,325</span>
+</div>
+<div class="flex justify-between items-center text-body-md font-body-md text-secondary">
+<span class="flex items-center gap-1.5">איסוף עצמי ונקודת חלוקה
+<span class="bg-surface-container-high text-primary text-[10px] px-1.5 py-0.2 font-label-caps">חינם</span></span>
+<span class="font-label-price text-primary font-semibold">₪0</span>
+</div>
+<div class="flex justify-between items-center text-body-md font-body-md text-secondary">
+<span class="">הנחת ועד (ממתין לקוד)</span>
+<span class="font-label-price text-outline">—</span>
+</div>
+<!-- Grand Total -->
+<div class="border-t-2 border-primary pt-4 mt-4 flex items-baseline justify-between">
+<div>
+<span class="font-headline-sm text-sm font-bold block text-primary">סה״כ לתשלום</span>
+<span class="font-body-sm text-[11px] text-secondary">כולל מע״מ ואחריות מלאה</span>
+</div>
+<div class="font-display-hero text-3xl sm:text-4xl text-primary font-black tracking-tight">
+                ₪1,325
+              </div>
+</div>
+</div>
+<!-- Huge Primary CTA Button -->
+<button class="w-full bg-primary hover:bg-surface hover:text-primary text-surface border-2 border-primary py-4 px-6 text-center font-headline-sm text-lg font-bold tracking-normal transition-all duration-200 flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="">מעבר לתשלום מאובטח</span>
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+</button>
+<!-- Alternative 1-Click Pay Options -->
+<div class="mt-4 grid grid-cols-2 gap-2 text-center">
+<button class="border border-outline-variant py-2.5 text-xs font-label-caps font-bold text-primary hover:border-primary transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-sm">credit_card</span>
+              BIT / APPLE PAY
+            </button>
+<button class="border border-outline-variant py-2.5 text-xs font-label-caps font-bold text-primary hover:border-primary transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-sm">receipt_long</span>
+              חיוב מרוכז בישיבה
+            </button>
+</div>
+<!-- Trust Badges & Guarantees -->
+<div class="mt-8 border-t border-outline-variant/60 pt-5 space-y-3 font-body-sm text-xs text-secondary">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg flex-shrink-0">published_with_changes</span>
+<span class=""><strong>החלפת מידות חינם:</strong> לא יושב בול? ניתן להחליף מידה בכל סניפי הרשת או בנקודת החלוקה המרוכזת בישיבה ללא תוספת עלות.</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg flex-shrink-0">lock</span>
+<span class=""><strong>תשלום מאובטח בתקן מחמיר:</strong> הצפנת SSL מלאה 256-bit ותקן אבטחה ישראלי מחמיר.</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg flex-shrink-0">calendar_month</span>
+<span class=""><strong>עד 12 תשלומים ללא ריבית:</strong> אפשרות לפריסה נוחה בכרטיס אשראי ללא עמלות נסתרות.</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Editorial Yeshiva Association Banner -->
+<section class="border-t border-outline-variant bg-surface-container-high/40 py-10 mt-12">
+<div class="max-w-7xl mx-auto px-space-lg flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-right">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">הסדר ועד הישיבה שלך חסר במערכת?</h3>
+<p class="font-body-md text-secondary mt-1">נציגי המכירות המרוכזות של BESPOCUT עומדים לשירות הגבאים והוועדים לתפירת הסדרי קבוצה ייעודיים.</p>
+</div>
+<a class="px-6 py-3 border border-primary text-primary font-headline-sm text-sm font-semibold hover:bg-primary hover:text-surface transition-colors flex-shrink-0" href="#">
+        פנייה למחלקת ועדים
+      </a>
+</div>
+</section>
+<!-- Footer (Derived verbatim from Shared Components JSON) -->
+<footer class="bg-primary-container dark:bg-primary-container text-surface dark:text-surface border-t border-outline-variant dark:border-outline-variant flat no shadows w-full mt-auto">
+<div class="w-full max-w-7xl mx-auto px-space-lg py-space-xl rtl">
+<!-- Top Tier: Brand and Links -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-8 border-b border-outline-variant/30">
+<!-- Logo -->
+<div class="font-label-caps text-label-caps tracking-widest uppercase font-bold text-surface dark:text-surface text-2xl">
+          BESPOCUT
+        </div>
+<!-- Footer Links List -->
+<nav class="flex flex-wrap gap-x-8 gap-y-3 font-body-md text-body-md">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+            שירות לקוחות
+          </a>
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+            מדריך מידות
+          </a>
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+            סניפים ונקודות חלוקה
+          </a>
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+            ועדי ישיבות ומכירות מרוכזות
+          </a>
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+            תקנון האתר ומדיניות פרטיות
+          </a>
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+            הסדרי נגישות
+          </a>
+</nav>
+</div>
+<!-- Bottom Tier: Copyright -->
+<div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-on-primary-container text-xs">
+<p class="font-body-sm text-body-sm">
+          © 2025 BESPOCUT. מעמד ישיבתי. כל הזכויות שמורות.
+        </p>
+<div class="flex items-center gap-4 text-xs font-label-caps tracking-wider">
+<span class="">HIGH-TAILORED EDITORIAL LINE</span>
+<span class="">•</span>
+<span class="">NON-IRON ARCHITECTURE</span>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html><html class="scroll-smooth" dir="rtl" lang="he"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BESPOCUT — הסדרי חנויות ושיתופי פעולה לישיבות</title>
+<!-- Google Fonts: Rubik & Space Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#281800",
+            "inverse-primary": "#c7c6ca",
+            "tertiary-container": "#281800",
+            "background": "#faf9f7",
+            "surface-tint": "#5e5e62",
+            "primary": "#000000",
+            "on-tertiary-container": "#9a805b",
+            "outline": "#76777b",
+            "tertiary-fixed-dim": "#e0c298",
+            "surface": "#faf9f7",
+            "primary-fixed-dim": "#c7c6ca",
+            "secondary-container": "#e1e2ea",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#e3e2e0",
+            "secondary": "#5c5e65",
+            "surface-container-low": "#f4f3f1",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#191c21",
+            "on-tertiary-fixed-variant": "#584323",
+            "on-secondary-fixed-variant": "#44474d",
+            "surface-variant": "#e3e2e0",
+            "secondary-fixed": "#e1e2ea",
+            "on-primary-container": "#848387",
+            "on-background": "#1a1c1b",
+            "on-primary-fixed": "#1b1b1f",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#e9e8e6",
+            "error-container": "#ffdad6",
+            "tertiary": "#000000",
+            "on-surface-variant": "#46464b",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#c7c6cb",
+            "primary-container": "#1b1b1f",
+            "on-secondary-container": "#62646b",
+            "primary-fixed": "#e3e2e6",
+            "on-primary-fixed-variant": "#46464a",
+            "inverse-surface": "#2f3130",
+            "surface-container": "#efeeec",
+            "secondary-fixed-dim": "#c5c6ce",
+            "on-surface": "#1a1c1b",
+            "tertiary-fixed": "#fedeb2",
+            "surface-bright": "#faf9f7",
+            "surface-dim": "#dadad8",
+            "inverse-on-surface": "#f1f1ef"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-mobile": "0.75rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1rem",
+            "margin": "3rem",
+            "space-xl": "4rem",
+            "space-lg": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "display-hero-mobile": ["Rubik"],
+            "headline-lg": ["Rubik"],
+            "headline-lg-mobile": ["Rubik"],
+            "body-lg": ["Rubik"],
+            "display-hero": ["Rubik"],
+            "headline-md": ["Rubik"],
+            "label-caps": ["Space Grotesk"],
+            "body-sm": ["Rubik"],
+            "label-price": ["Space Grotesk"],
+            "headline-sm": ["Rubik"],
+            "body-md": ["Rubik"]
+          },
+          "fontSize": {
+            "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "900" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "800" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+            "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-price": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-border-hairline {
+      border: 1px solid rgba(17, 18, 21, 0.12);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary min-h-screen flex flex-col font-body-md text-body-md antialiased">
+<!-- ================= TOP NAV BAR (SHARED COMPONENT) ================= -->
+<nav class="sticky top-0 w-full z-50 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 transition-all duration-300">
+<div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin flex items-center justify-between h-20 rtl">
+<!-- Right: Brand Logo -->
+<div class="flex items-center gap-6">
+<a class="text-headline-md font-headline-md tracking-tight font-extrabold text-on-surface dark:text-inverse-on-surface flex items-center gap-2 group" href="#">
+<span class="text-primary tracking-tighter">מעמד ישיבתי</span>
+<span class="text-xs px-2 py-0.5 bg-primary text-on-primary font-label-caps tracking-widest align-middle">BESPOCUT</span>
+</a>
+</div>
+<!-- Center: Navigation Links -->
+<div class="hidden lg:flex items-center gap-8 rtl">
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#">
+          דף הבית
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#clothing">
+          חדר ביגוד
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#tzitza">
+          חדר צצ״א
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#sales">
+          מכירות
+        </a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#stores">
+          הסדרי חנויות
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#about">
+          אודות
+        </a>
+</div>
+<!-- Left: Search, Account & Basket Cluster -->
+<div class="flex items-center gap-4">
+<!-- Minimal Search Box -->
+<div class="relative hidden sm:block">
+<input class="w-52 lg:w-64 bg-surface-container-low border border-outline-variant/40 py-1.5 pr-8 pl-3 text-body-sm font-body-sm focus:outline-none focus:border-primary transition-all duration-200" placeholder="חיפוש פריט, גזרה או מידה..." type="text">
+<span class="material-symbols-outlined absolute right-2 top-2 text-[18px] text-on-surface-variant pointer-events-none">search</span>
+</div>
+<!-- Trailing Icon Actions -->
+<a class="p-2 text-on-surface hover:text-secondary-fixed-dim transition-colors duration-200 relative" href="#" title="מועדפים">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</a>
+<a class="p-2 text-on-surface hover:text-secondary-fixed-dim transition-colors duration-200 relative" href="#" title="סל קניות">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute 1 top-1 -right-0.5 w-4 h-4 rounded-full bg-primary text-on-primary text-[10px] font-label-price flex items-center justify-center font-bold">2</span>
+</a>
+<a class="hidden md:flex items-center gap-1 py-1.5 px-3 border border-primary text-primary text-body-sm font-headline-sm hover:bg-primary hover:text-on-primary transition-all duration-200" href="#contact-section">
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span class="">התחברות</span>
+</a>
+</div>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- ================= EDITORIAL HERO BANNER ================= -->
+<section class="relative w-full border-b border-outline-variant bg-surface-container-low overflow-hidden">
+<div class="w-full max-w-7xl mx-auto px-space-lg py-16 md:py-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Editorial Headline Column (7 cols) -->
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-3 border border-primary px-3 py-1 bg-surface-container-lowest">
+<span class="w-1.5 h-1.5 bg-primary"></span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-primary">INSTITUTIONAL SYNDICATE • תנאי הסדר מעמד ישיבתי</span>
+</div>
+<h1 class="font-display-hero text-display-hero hidden md:block text-primary leading-tight font-black tracking-tight">
+              הסדרי חנויות ושיתופי פעולה לישיבות
+            </h1>
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:hidden text-primary font-black">
+              הסדרי חנויות ושיתופי פעולה לישיבות
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              רשת חנויות וסניפים בפריסה ארצית עם תנאי רכישה מועדפים, סבסוד וועדים ותווי קנייה לבני ישיבות. שילוב בין מסורת sartorial מוקפדת, בדים אירופאיים משובחים, והתאמה פיננסית קהילתית לכל תלמיד ישיבה.
+            </p>
+<div class="pt-4 flex flex-wrap gap-4 items-center">
+<a class="bg-primary text-on-primary px-8 py-3.5 font-headline-sm text-headline-sm tracking-wide border border-primary hover:bg-surface-container-lowest hover:text-primary transition-all duration-200" href="#contact-section">
+                הגשת בקשה להסדר וועד
+              </a>
+<a class="border border-primary text-primary px-8 py-3.5 font-headline-sm text-headline-sm hover:bg-primary hover:text-on-primary transition-all duration-200" href="#stores-section">
+                רשימת הסניפים והשעות
+              </a>
+</div>
+<!-- Quick Metrics Badge Matrix -->
+<div class="pt-8 border-t border-outline-variant grid grid-cols-3 gap-6">
+<div>
+<p class="font-label-price text-label-price text-2xl font-bold text-primary">35%</p>
+<p class="font-body-sm text-body-sm text-secondary">הנחת בסיס לוועדים וקבוצות</p>
+</div>
+<div>
+<p class="font-label-price text-label-price text-2xl font-bold text-primary">42+</p>
+<p class="font-body-sm text-body-sm text-secondary">ישיבות בהסדר קבע ארצי</p>
+</div>
+<div>
+<p class="font-label-price text-label-price text-2xl font-bold text-primary">100%</p>
+<p class="font-body-sm text-body-sm text-secondary">בדי כותנה ללא גיהוץ Non-Iron</p>
+</div>
+</div>
+</div>
+<!-- Editorial Imagery Column (5 cols) -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] bg-surface-container border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An editorial high-fashion monochrome photo of tailored luxury white shirts, black superfine wool jackets, and wool tzitzit draped precisely on an architecturally minimal wooden counter inside an upscale European boutique. The lighting is crisp, gallery-grade directional soft light highlighting immaculate fabric weaves. The scene evokes severe, high-contrast sartorial elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7PYhPquL7n_hZPtKyuWSIDqxAV1Nscvp6qjRrMiaHylMqaERG-TzAN8ufg3o97zpziTuSdVn1DUZ9ifjtaGw8xS-4CM7Urx3ZskJak0Fyd27f-iuKGFm7E2tA66hxpO3dm4DGzb-g3ili49LZ6joFuXu5KICX9qq2L2aCFb9ePoyqps4zHiakTITlHlHUUvqIdEmhV_taPx6eG4Q-fF0F-shkcJEe59cEIERaD8_odMkCQwdLlksz">
+<div class="absolute bottom-0 inset-x-0 bg-primary/95 text-on-primary p-4 border-t border-outline-variant">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps uppercase text-xs">COLLECTION ARCHIVE</span>
+<span class="font-body-sm text-body-sm text-outline-variant">שירות חלוקה ומדידה פנים-ישיבתי</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 3 TRACKS / CHANNELS (מסלולי הסדרים) ================= -->
+<section class="w-full py-20 bg-surface border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-4 border-b border-outline-variant gap-4">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">CATEGORICAL STRUCTURE</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold mt-1">3 מסלולי הסדר מותאמים אישית</h2>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-md">
+            מערך התקשרות רשמי שנבנה במיוחד עבור מנהלי מוסדות, גבאי וועדים וחתנים לקראת שמחתם.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Track 1: הסדר וועדי ישיבות -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-1 uppercase">TRACK 01</span>
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="groups">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary mb-3">הסדר וועדי ישיבות</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                רכישות מרוכזות לקבוצות, שיעורים ומחזורים שלמים. תנאי מחירון סיטונאיים עם הנחות עמוקות של עד 35% על כל פריטי היסוד.
+              </p>
+<ul class="space-y-3 mb-8 border-t border-outline-variant pt-4">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+                  אספקה ישירה ומדידות מרוכזות במתחם הישיבה
+                </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+                  סינכרון מידות מהיר לחבילות חולצות Non-Iron
+                </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+                  איש קשר וגבאי ייעודי לכל ישיבה
+                </li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<a class="w-full inline-flex justify-center items-center gap-2 py-3 border border-primary text-primary font-headline-sm text-headline-sm group-hover:bg-primary group-hover:text-on-primary transition-all duration-200" href="#contact-section">
+<span class="">תיאום מועד מדידה לישיבה</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+</a>
+</div>
+</div>
+<!-- Track 2: תווי קנייה וסבסוד הנהלה -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-1 uppercase">TRACK 02</span>
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="credit_card">credit_card</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary mb-3">תווי קנייה וסבסוד הנהלה</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                מערכת סליקה מאושרת למימוש ישיר של תלושים, כרטיסי הטבה, מלגות הנהלת ישיבה וקרנות גמ"ח ועזרה לתלמיד.
+              </p>
+<ul class="space-y-3 mb-8 border-t border-outline-variant pt-4">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+                  חיבור ממוחשב מול קרנות ישיבתיות מובילות
+                </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+                  אפשרות לפיצול תשלומים והשלמת הורים חכמה
+                </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+                  הכרה מיידית בכל סוגי שובר דיגיטלי ומודפס
+                </li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<a class="w-full inline-flex justify-center items-center gap-2 py-3 border border-primary text-primary font-headline-sm text-headline-sm group-hover:bg-primary group-hover:text-on-primary transition-all duration-200" href="#contact-section">
+<span class="">בדיקת זכאות וסבסוד</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+</a>
+</div>
+</div>
+<!-- Track 3: הסדרי חתנים -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-1 uppercase">TRACK 03</span>
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="hotel_class">hotel_class</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary mb-3">הסדרי חתנים ומערך ביגוד</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">חבילת הלבשה שלמה ומוכנה מן המדף לחתנים. ליווי באגף החתנים למדידה מהירה, כולל חליפות שבת ויומיום, ציציות צמר משובחות וכובעים, ושירות חייט במקום לביצוע מכפלות והצרות בלבד.</p>
+<ul class="space-y-3 mb-8 border-t border-outline-variant pt-4">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+                  פגישת סטיילינג ומדידה פרטנית בסלון סגור
+                </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+                  התאמות חייטות חינם על כל החליפות
+                </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+                  מארז שבת ומארז ימי חול מורחב במחיר מסובסד
+                </li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<a class="w-full inline-flex justify-center items-center gap-2 py-3 border border-primary text-primary font-headline-sm text-headline-sm group-hover:bg-primary group-hover:text-on-primary transition-all duration-200" href="#contact-section">
+<span class="">תיאום פגישת חתן אישית</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= STORES & BRANCHES DIRECTORY (סניפים וחנויות מורשות) ================= -->
+<section class="w-full py-20 bg-surface-container-low border-b border-outline-variant" id="stores-section">
+<div class="max-w-7xl mx-auto px-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">RETAIL LOCATIONS &amp; EXPEDITIONS</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold mt-1">רשימת סניפים ונקודות חלוקה מורשות</h2>
+</div>
+<span class="text-body-sm font-body-sm text-secondary mt-2 md:mt-0">שעות פעילות מותאמות לסדרי הלימוד הישיבתיים</span>
+</div>
+<!-- 4 Major Flagship Branches Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+<!-- Branch 1: Jerusalem -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps uppercase text-xs font-bold text-secondary">סניף דגל מרכזי</span>
+<span class="inline-block w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary mb-1">ירושלים</h3>
+<p class="font-body-sm text-body-sm text-outline mb-4">רוממה / גאולה (רחוב המ"ג 14)</p>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant pt-4">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-primary" data-icon="schedule">schedule</span>
+<div class="">
+<span class="font-bold text-primary block">שעות פתיחה:</span>
+                    ימים א'-ה': 10:00 - 22:30 רצוף<br>
+                    שישי: 09:30 - 13:30<br>
+                    מוצ"ש: שעה מתום השבת עד 23:30
+                  </div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary" data-icon="call">call</span>
+<span class="font-label-price text-label-price text-primary">02-581-9900</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant">
+<span class="text-xs font-label-caps text-secondary uppercase block mb-1">SPECIAL SERVICE</span>
+<p class="font-body-sm text-body-sm text-primary font-medium">סלון חתנים נפרד ועמדת כוונון חייטות</p>
+</div>
+</div>
+<!-- Branch 2: Bnei Brak -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps uppercase text-xs font-bold text-secondary">מרכז גוש דן</span>
+<span class="inline-block w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary mb-1">בני ברק</h3>
+<p class="font-body-sm text-body-sm text-outline mb-4">רחוב רבי עקיבא 88 (פינת השומר)</p>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant pt-4">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-primary" data-icon="schedule">schedule</span>
+<div class="">
+<span class="font-bold text-primary block">בין הסדרים וערב:</span>
+                    א'-ה': 10:30-14:30 | 18:00-23:00<br>
+                    (פתיחה מיוחדת בבין הסדרים)<br>
+                    שישי: 09:30 - 13:00
+                  </div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary" data-icon="call">call</span>
+<span class="font-label-price text-label-price text-primary">03-618-4420</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant">
+<span class="text-xs font-label-caps text-secondary uppercase block mb-1">SPECIAL SERVICE</span>
+<p class="font-body-sm text-body-sm text-primary font-medium">עמדת קשירת ציציות ידנית לפי כל השיטות</p>
+</div>
+</div>
+<!-- Branch 3: Modi'in Illit -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps uppercase text-xs font-bold text-secondary">קרית ספר</span>
+<span class="inline-block w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary mb-1">מודיעין עילית</h3>
+<p class="font-body-sm text-body-sm text-outline mb-4">מרכז קסם, שדרות יחזקאל 2</p>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant pt-4">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-primary" data-icon="schedule">schedule</span>
+<div class="">
+<span class="font-bold text-primary block">שעות פעילות:</span>
+                    א'-ה': 11:00 - 15:00 | 18:30 - 22:30<br>
+                    שישי: 09:30 - 13:00<br>
+                    מוצ"ש: מותאם לעונות השנה
+                  </div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary" data-icon="call">call</span>
+<span class="font-label-price text-label-price text-primary">08-974-1234</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant">
+<span class="text-xs font-label-caps text-secondary uppercase block mb-1">SPECIAL SERVICE</span>
+<p class="font-body-sm text-body-sm text-primary font-medium">נקודת מסירה ישירה לבני ישיבות האזור</p>
+</div>
+</div>
+<!-- Branch 4: Beit Shemesh -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps uppercase text-xs font-bold text-secondary">הרי יהודה</span>
+<span class="inline-block w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary mb-1">בית שמש</h3>
+<p class="font-body-sm text-body-sm text-outline mb-4">מרכז מסחרי רמה א', נחל קישון 48</p>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant pt-4">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-primary" data-icon="schedule">schedule</span>
+<div class="">
+<span class="font-bold text-primary block">שעות פעילות:</span>
+                    א'-ה': 10:00 - 14:00 | 17:30 - 22:00<br>
+                    שישי: 09:30 - 13:00<br>
+                    מוצ"ש: סגור (למעט זמני מבצע)
+                  </div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary" data-icon="call">call</span>
+<span class="font-label-price text-label-price text-primary">02-999-5512</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant">
+<span class="text-xs font-label-caps text-secondary uppercase block mb-1">SPECIAL SERVICE</span>
+<p class="font-body-sm text-body-sm text-primary font-medium">מלאי מורחב של מידות ארוכות ומיוחדות</p>
+</div>
+</div>
+</div>
+<!-- Yeshiva On-Campus Direct Distribution Points -->
+<div class="bg-surface-container border border-outline-variant p-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary">CAMPUS HUBS &amp; EXPEDITIONS</span>
+<h3 class="font-headline-md text-headline-md font-bold text-primary">נקודות חלוקה ישירות בישיבות נבחרות</h3>
+</div>
+<span class="text-sm text-secondary bg-surface-container-lowest px-3 py-1 border border-outline-variant">
+              חלוקה תקופתית בראשי חודשים וערבי חגים
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-4xl">
+            אנו מפעילים ניידות מדידה ושירות משלוחים קולקטיבי המגיע ישירות לחדרי הוועדים בתוך היכל הישיבה, ללא צורך ביציאה מהסדרים:
+          </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+<div class="bg-surface-container-lowest border border-outline-variant p-4 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">ישיבת חברון</span>
+<span class="font-body-sm text-body-sm text-outline">גבעת מרדכי</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-4 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">ישיבת מיר</span>
+<span class="font-body-sm text-body-sm text-outline">בית ישראל</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-4 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">ישיבת פוניבז'</span>
+<span class="font-body-sm text-body-sm text-outline">גבעת הישיבה</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-4 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">ישיבת תפרח</span>
+<span class="font-body-sm text-body-sm text-outline">תושיה</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-4 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">ישיבת עטרת</span>
+<span class="font-body-sm text-body-sm text-outline">ירושלים</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-4 text-center flex flex-col justify-center items-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">ישיבות נוספות</span>
+<a class="font-body-sm text-body-sm underline text-primary" href="#contact-section">הצטרפות להסדר</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= EDITORIAL SHOWCASE (EDITORIAL SARTORIAL ETHOS) ================= -->
+<section class="w-full py-16 bg-surface border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+<div class="border-r-2 border-primary pr-6">
+<span class="font-label-caps text-label-caps uppercase text-secondary">01 • MATERIAL INTEGRITY</span>
+<h4 class="font-headline-md text-headline-md font-bold text-primary mt-1">בדים ללא פשרות</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              100% כותנה מצרית סרוקה בטווייה כפולה 100/2. עמידות מקסימלית בשטיפות תכופות של חיי פנימייה וישיבה.
+            </p>
+</div>
+<div class="border-r-2 border-primary pr-6">
+<span class="font-label-caps text-label-caps uppercase text-secondary">02 • HALACHIC FIDELITY</span>
+<h4 class="font-headline-md text-headline-md font-bold text-primary mt-1">כשרות מהדרין ללא חשש שעטנז</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              בדיקת מעבדה קפדנית לכל אצווה. חוטי צמר טהורים בעבודת יד וציציות בהשגחות המהודרות ביותר.
+            </p>
+</div>
+<div class="border-r-2 border-primary pr-6">
+<span class="font-label-caps text-label-caps uppercase text-secondary">03 • BESPOKE LOGISTICS</span>
+<h4 class="font-headline-md text-headline-md font-bold text-primary mt-1">אחריות וחילוף ישיר</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">החלפת מידות מהירה בכל אחד מסניפי הרשת או בנקודת החלוקה בישיבה ללא שום עלות.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= DEDICATED PARTNERSHIP REQUEST FORM (טופס פנייה ייעודי) ================= -->
+<section class="w-full py-24 bg-surface-container-low" id="contact-section">
+<div class="max-w-4xl mx-auto px-space-lg">
+<div class="border border-outline-variant bg-surface-container-lowest p-8 md:p-14 shadow-none">
+<!-- Form Header -->
+<div class="mb-10 text-center space-y-3">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">COMMITTEE ACCREDITATION</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">טופס פנייה ייעודי לנציגי וועדים, הנהלות וגבאים</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
+              השאירו פרטים להקמת הסדר חדש, תיאום מדידה מרוכזת לבני הישיבה או בירור הסכמי תלושים וסבסודים.
+            </p>
+</div>
+<!-- Form Body -->
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('הפנייה התקבלה בהצלחה. מנהל קשרי ישיבות ייצור קשר בהקדם.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Field 1: שם הישיבה -->
+<div class="space-y-2">
+<label class="font-headline-sm text-headline-sm font-semibold text-primary block" for="yeshiva-name">
+                  שם הישיבה / המוסד <span class="text-error">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-3 px-4 font-body-md text-body-md transition-all duration-200" id="yeshiva-name" placeholder="לדוגמה: ישיבת פוניבז' / ישיבת חברון" required="" type="text">
+</div>
+<!-- Field 2: שם איש קשר -->
+<div class="space-y-2">
+<label class="font-headline-sm text-headline-sm font-semibold text-primary block" for="contact-name">
+                  שם איש הקשר / תפקיד <span class="text-error">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-3 px-4 font-body-md text-body-md transition-all duration-200" id="contact-name" placeholder="לדוגמה: ישראל כהן (גבאי וועד שיעור ג')" required="" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Field 3: טלפון לבירורים -->
+<div class="space-y-2">
+<label class="font-headline-sm text-headline-sm font-semibold text-primary block" for="contact-phone">
+                  טלפון ישיר / נייד <span class="text-error">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-3 px-4 font-body-md text-body-md text-right transition-all duration-200" dir="ltr" id="contact-phone" placeholder="050-0000000" required="" type="tel">
+</div>
+<!-- Field 4: מספר תלמידים משוער -->
+<div class="space-y-2">
+<label class="font-headline-sm text-headline-sm font-semibold text-primary block" for="student-count">
+                  מספר תלמידים משוער בהסדר
+                </label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-3 px-4 font-body-md text-body-md transition-all duration-200" id="student-count">
+<option value="group-small">קבוצה / חדר (10-30 תלמידים)</option>
+<option value="group-class">שיעור שלם (30-80 תלמידים)</option>
+<option value="group-yeshiva">כלל תלמידי הישיבה (100-300 תלמידים)</option>
+<option value="group-mega">מוסד גדול (מעל 300 תלמידים)</option>
+<option value="groom">הסדר אישי לחתן / חתנים</option>
+</select>
+</div>
+</div>
+<!-- Field 5: סוג ההסדר המבוקש -->
+<div class="space-y-2">
+<label class="font-headline-sm text-headline-sm font-semibold text-primary block mb-2">
+                סוג ההסדר המבוקש <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<label class="flex items-center gap-3 border border-outline-variant p-3 cursor-pointer hover:border-primary transition-colors">
+<input checked="" class="text-primary focus:ring-0 rounded-none w-4 h-4" name="plan-type" type="radio">
+<span class="font-body-md text-body-md text-primary font-medium">הסדר וועד ישיבה</span>
+</label>
+<label class="flex items-center gap-3 border border-outline-variant p-3 cursor-pointer hover:border-primary transition-colors">
+<input class="text-primary focus:ring-0 rounded-none w-4 h-4" name="plan-type" type="radio">
+<span class="font-body-md text-body-md text-primary font-medium">תווי קנייה וסבסוד</span>
+</label>
+<label class="flex items-center gap-3 border border-outline-variant p-3 cursor-pointer hover:border-primary transition-colors">
+<input class="text-primary focus:ring-0 rounded-none w-4 h-4" name="plan-type" type="radio">
+<span class="font-body-md text-body-md text-primary font-medium">הסדר חתנים מורחב</span>
+</label>
+</div>
+</div>
+<!-- Field 6: הערות נוספות -->
+<div class="space-y-2">
+<label class="font-headline-sm text-headline-sm font-semibold text-primary block" for="notes">
+                הערות או בקשות מיוחדות (למשל מועד אספקה רצוי או ימי סדרים מועדפים)
+              </label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-3 px-4 font-body-md text-body-md transition-all duration-200" id="notes" placeholder="פרט כאן צרכים מיוחדים, שיטת קשירת ציצית, דרישות תשלום וכד'..." rows="3"></textarea>
+</div>
+<!-- Agreement Checkbox -->
+<div class="flex items-start gap-3 pt-2">
+<input class="mt-1 text-primary focus:ring-0 rounded-none w-4 h-4" id="terms-agree" required="" type="checkbox">
+<label class="font-body-sm text-body-sm text-secondary" for="terms-agree">
+                אני מאשר כי הפרטים נמסרים בתום לב מטעם וועד / נציגות הישיבה לשם בחינת תנאי הסדר מוסדי.
+              </label>
+</div>
+<!-- Action Button -->
+<div class="pt-4">
+<button class="w-full bg-primary text-on-primary py-4 font-headline-sm text-headline-sm font-bold tracking-wider uppercase border border-primary hover:bg-surface-container-lowest hover:text-primary transition-all duration-200 flex justify-center items-center gap-2" type="submit">
+<span class="">שליחת בקשה לנציג קשרי ישיבות</span>
+<span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- ================= FOOTER (SHARED COMPONENT) ================= -->
+<footer class="bg-primary-container dark:bg-primary-container text-surface dark:text-surface border-t border-outline-variant dark:border-outline-variant w-full">
+<div class="w-full max-w-7xl mx-auto px-space-lg py-space-xl rtl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+<!-- Brand & Mission Column (5 cols) -->
+<div class="md:col-span-5 space-y-4">
+<span class="font-label-caps text-label-caps tracking-widest uppercase font-bold text-surface dark:text-surface text-xl block">
+            BESPOCUT
+          </span>
+<p class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-container max-w-sm leading-relaxed">
+            בית אופנה עילית לגבר הישיבתי. איכות חייטות אירופאית קפדנית, 100% כותנה ללא גיהוץ, והסדרי רכישה מועדפים בשיתוף ראשי וועדי הישיבות בארץ.
+          </p>
+<div class="pt-2 text-on-primary-container text-sm">
+<span class="">מוקד תיאום וועדים ארצי: </span>
+<span class="font-label-price text-surface">02-581-9900</span>
+</div>
+</div>
+<!-- Links Navigation Columns (7 cols) -->
+<div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6">
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-surface mb-4 font-bold">שירות וסניפים</h4>
+<ul class="space-y-2.5 font-body-md text-body-md">
+<li class=""><a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">שירות לקוחות</a></li>
+<li class=""><a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">מדריך מידות</a></li>
+<li class=""><a class="text-surface dark:text-surface underline font-bold" href="#stores-section">סניפים ונקודות חלוקה</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-surface mb-4 font-bold">הסדרים ומוסדות</h4>
+<ul class="space-y-2.5 font-body-md text-body-md">
+<li class=""><a class="text-surface dark:text-surface underline font-bold" href="#contact-section">וועדי ישיבות ומכירות מרוכזות</a></li>
+<li class=""><a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#contact-section">הסדרי חתנים</a></li>
+<li class=""><a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#stores-section">תלושי סבסוד והנהלה</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-surface mb-4 font-bold">משפטי ונגישות</h4>
+<ul class="space-y-2.5 font-body-md text-body-md">
+<li class=""><a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">תקנון האתר ומדיניות פרטיות</a></li>
+<li class=""><a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">הסדרי נגישות</a></li>
+<li class=""><a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">תעודות כשרות ושעטנז</a></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Copyright Sub-bar -->
+<div class="border-t border-outline-variant/30 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-md text-body-md text-on-primary-container dark:text-on-primary-container">
+<p class="">© 2025 BESPOCUT. מעמד ישיבתי. כל הזכויות שמורות.</p>
+<div class="flex items-center gap-6 text-sm">
+<span class="">JERUSALEM</span>
+<span class="">•</span>
+<span class="">BNEI BRAK</span>
+<span class="">•</span>
+<span class="">MODI'IN ILLIT</span>
+<span class="">•</span>
+<span class="">BEIT SHEMESH</span>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+</body></html>

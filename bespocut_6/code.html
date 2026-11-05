@@ -1,0 +1,775 @@
+<!DOCTYPE html><html class="scroll-smooth" dir="rtl" lang="he" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BESPOCUT | חדר ביגוד - הלבשה ומחלקה מחויטת לבני הישיבות</title>
+<!-- Google Fonts: Rubik & Space Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#281800",
+            "inverse-primary": "#c7c6ca",
+            "tertiary-container": "#281800",
+            "background": "#faf9f7",
+            "surface-tint": "#5e5e62",
+            "primary": "#000000",
+            "on-tertiary-container": "#9a805b",
+            "outline": "#76777b",
+            "tertiary-fixed-dim": "#e0c298",
+            "surface": "#faf9f7",
+            "primary-fixed-dim": "#c7c6ca",
+            "secondary-container": "#e1e2ea",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#e3e2e0",
+            "secondary": "#5c5e65",
+            "surface-container-low": "#f4f3f1",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#191c21",
+            "on-tertiary-fixed-variant": "#584323",
+            "on-secondary-fixed-variant": "#44474d",
+            "surface-variant": "#e3e2e0",
+            "secondary-fixed": "#e1e2ea",
+            "on-primary-container": "#848387",
+            "on-background": "#1a1c1b",
+            "on-primary-fixed": "#1b1b1f",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#e9e8e6",
+            "error-container": "#ffdad6",
+            "tertiary": "#000000",
+            "on-surface-variant": "#46464b",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#c7c6cb",
+            "primary-container": "#1b1b1f",
+            "on-secondary-container": "#62646b",
+            "primary-fixed": "#e3e2e6",
+            "on-primary-fixed-variant": "#46464a",
+            "inverse-surface": "#2f3130",
+            "surface-container": "#efeeec",
+            "secondary-fixed-dim": "#c5c6ce",
+            "on-surface": "#1a1c1b",
+            "tertiary-fixed": "#fedeb2",
+            "surface-bright": "#faf9f7",
+            "surface-dim": "#dadad8",
+            "inverse-on-surface": "#f1f1ef"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-mobile": "0.75rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1rem",
+            "margin": "3rem",
+            "space-xl": "4rem",
+            "space-lg": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "display-hero-mobile": ["Rubik"],
+            "headline-lg": ["Rubik"],
+            "headline-lg-mobile": ["Rubik"],
+            "body-lg": ["Rubik"],
+            "display-hero": ["Rubik"],
+            "headline-md": ["Rubik"],
+            "label-caps": ["Space Grotesk"],
+            "body-sm": ["Rubik"],
+            "label-price": ["Space Grotesk"],
+            "headline-sm": ["Rubik"],
+            "body-md": ["Rubik"]
+          },
+          "fontSize": {
+            "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "900" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "800" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+            "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-price": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Editorial Scrollbar & Utility Customizations */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #faf9f7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #111215;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary selection:text-surface-bright">
+<!-- Top Announcement Bar (Editorial Note) -->
+
+<!-- TopNavBar (Derived verbatim from Shared Components JSON with active: "חדר ביגוד") -->
+<nav class="sticky top-0 w-full z-50 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 transition-all duration-300">
+<div class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin flex items-center justify-between h-20 rtl">
+<!-- Right: Brand Logo -->
+<div class="flex items-center gap-6">
+<a class="text-headline-md font-headline-md tracking-tight font-extrabold text-on-surface dark:text-inverse-on-surface flex items-center gap-2 group" href="#">
+<span class="text-primary tracking-tighter">מעמד ישיבתי</span>
+<span class="text-xs px-2 py-0.5 bg-primary text-on-primary font-label-caps tracking-widest align-middle">BESPOCUT</span>
+</a>
+</div>
+<!-- Center: Navigation Links -->
+<div class="hidden lg:flex items-center gap-8 rtl">
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#">
+          דף הבית
+        </a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#clothing">
+          חדר ביגוד
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#tzitza">
+          חדר צצ״א
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#sales">
+          מכירות
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#stores">
+          הסדרי חנויות
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-normal hover:text-primary dark:hover:text-inverse-primary pb-1 text-body-md font-body-md transition-colors duration-200" href="#about">
+          אודות
+        </a>
+</div>
+<!-- Left: Search, Account & Basket Cluster -->
+<div class="flex items-center gap-4">
+<!-- Minimal Search Box -->
+<div class="relative hidden sm:block">
+<input class="w-52 lg:w-64 bg-surface-container-low border border-outline-variant/40 py-1.5 pr-8 pl-3 text-body-sm font-body-sm focus:outline-none focus:border-primary transition-all duration-200" placeholder="חיפוש פריט, גזרה או מידה..." type="text">
+<span class="material-symbols-outlined absolute right-2 top-2 text-[18px] text-on-surface-variant pointer-events-none">search</span>
+</div>
+<!-- Trailing Icon Actions -->
+<a class="p-2 text-on-surface hover:text-secondary-fixed-dim transition-colors duration-200 relative" href="#" title="מועדפים">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</a>
+<a class="p-2 text-on-surface hover:text-secondary-fixed-dim transition-colors duration-200 relative" href="#" title="סל קניות">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute 1 top-1 -right-0.5 w-4 h-4 rounded-full bg-primary text-on-primary text-[10px] font-label-price flex items-center justify-center font-bold">2</span>
+</a>
+<a class="hidden md:flex items-center gap-1 py-1.5 px-3 border border-primary text-primary text-body-sm font-headline-sm hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span class="">התחברות</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Editorial Category Hero Banner -->
+<section class="relative bg-surface-container-low border-b border-outline-variant overflow-hidden">
+<div class="max-w-7xl mx-auto px-space-md md:px-space-lg py-12 md:py-20 lg:py-24 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<!-- Text & Identity Col -->
+<div class="md:col-span-8 space-y-4">
+<div class="inline-flex items-center gap-3">
+<span class="h-px w-8 bg-primary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">מחלקה ראשית | עונת חורף תשפ״ה</span>
+</div>
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero tracking-tighter text-primary">
+          חדר ביגוד
+        </h1>
+<p class="font-headline-sm text-headline-sm text-secondary max-w-2xl font-normal leading-relaxed pt-2">
+          מלתחה מחויטת, איכות ללא פשרות, ובדים עמידים שאינם מתקמטים לסדרי הישיבה. שילוב בין תקן תורני אדוק וסטנדרט תפירה עילית אירופאי.
+        </p>
+</div>
+<!-- Quick Metrics Col -->
+<div class="md:col-span-4 flex md:flex-col justify-between md:justify-end gap-6 md:border-r md:border-outline-variant md:pr-8">
+<div>
+<span class="block font-label-caps text-xs text-secondary tracking-widest uppercase">בדים מובחרים</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">100% צמר וכותנה מצרית</span>
+</div>
+<div>
+<span class="block font-label-caps text-xs text-secondary tracking-widest uppercase">טכנולוגיית סדר</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">Non-Iron 72H טהור</span>
+</div>
+<div>
+<span class="block font-label-caps text-xs text-secondary tracking-widest uppercase">הסדרי ישיבות</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">סבסוד ועד ומכירות מרוכזות</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Advanced Editorial Sticky Filter Bar (Zara / Modern Editorial Style) -->
+<nav aria-label="סינונים מהירים" class="sticky top-20 z-40 bg-surface/95 backdrop-blur-md border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-space-md md:px-space-lg">
+<!-- Subcategory Pills Row -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-3 text-xs font-headline-sm whitespace-nowrap">
+<button class="bg-primary text-surface px-4 py-2 transition-colors">
+          הכל
+        </button>
+<button class="border border-primary/20 text-primary hover:border-primary px-4 py-2 transition-colors bg-surface-container-lowest">
+          חליפות וסירטוקים
+        </button>
+<button class="border border-primary/20 text-primary hover:border-primary px-4 py-2 transition-colors bg-surface-container-lowest">
+          חולצות כותנה Non-Iron
+        </button>
+<button class="border border-primary/20 text-primary hover:border-primary px-4 py-2 transition-colors bg-surface-container-lowest">
+          מכנסי אלגנט
+        </button>
+<button class="border border-primary/20 text-primary hover:border-primary px-4 py-2 transition-colors bg-surface-container-lowest">
+          נעלי שבת וסדר
+        </button>
+<button class="border border-primary/20 text-primary hover:border-primary px-4 py-2 transition-colors bg-surface-container-lowest">
+          עניבות משי וחגורות עור
+        </button>
+<button class="border border-primary/20 text-primary hover:border-primary px-4 py-2 transition-colors bg-surface-container-lowest">
+          הלבשה תחתונה וגרביים
+        </button>
+</div>
+<!-- Granular Dropdown & Toggle Filters -->
+<div class="border-t border-outline-variant/60 py-3 flex flex-wrap items-center justify-between gap-4 text-xs">
+<!-- Filter Controls -->
+<div class="flex flex-wrap items-center gap-2 md:gap-3">
+<!-- Size Selector Trigger -->
+<div class="relative group">
+<button class="inline-flex items-center gap-2 border border-outline-variant px-3 py-1.5 hover:border-primary transition-colors bg-surface">
+<span class="">מידה: <strong class="font-medium">הכל</strong></span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Fit Selector Trigger -->
+<div class="relative group">
+<button class="inline-flex items-center gap-2 border border-outline-variant px-3 py-1.5 hover:border-primary transition-colors bg-surface">
+<span class="">גזרה: <strong class="font-medium">Slim Fit, ישיבתי קלאסי</strong></span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Color Selector Trigger -->
+<div class="relative group">
+<button class="inline-flex items-center gap-2 border border-outline-variant px-3 py-1.5 hover:border-primary transition-colors bg-surface">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-black border border-outline-variant"></span>
+<span class="">צבע: <strong class="font-medium">שחור, פחם, לבן</strong></span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Fabric Technology Filter -->
+<div class="relative group hidden sm:block">
+<button class="inline-flex items-center gap-2 border border-outline-variant px-3 py-1.5 hover:border-primary transition-colors bg-surface">
+<span class="">תכונה: <strong class="font-medium">Non-Iron מוחלט</strong></span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<button class="text-secondary underline hover:text-primary transition-colors text-[11px] pr-2">
+            איפוס סינונים
+          </button>
+</div>
+<!-- Sorting & Layout Mode -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<label class="text-secondary" for="sort">סידור לפי:</label>
+<select class="bg-transparent border-0 border-b border-outline-variant py-1 pr-3 pl-8 text-xs font-headline-sm focus:ring-0 focus:border-primary cursor-pointer" id="sort"><option>הנמכרים ביותר בהיכלים</option><option>מהמחיר: מהנמוך לגבוה</option><option>מהמחיר: מהגבוה לנמוך</option><option>פריטים חדשים לחורף</option></select>
+</div>
+<span class="text-secondary text-xs">8 פריטים מוצגים</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Product Showcase Grid (8 High-Fashion Items) -->
+<main class="max-w-7xl mx-auto px-space-md md:px-space-lg py-10 md:py-16">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+<!-- Item 1: חליפת שבת שחורה 2 חלקים Super 130'S -->
+<article class="group flex flex-col relative bg-surface-container-lowest border border-outline-variant/40">
+<!-- Badge -->
+<div class="absolute top-3 right-3 z-10 flex flex-col gap-1 items-start">
+<span class="bg-primary text-surface text-[10px] font-label-caps px-2 py-0.5 tracking-wider uppercase">צמר סופר 130'S</span>
+<span class="bg-surface-container-low text-primary text-[10px] font-label-caps px-2 py-0.5 border border-outline-variant/40">שבת ומועד</span>
+</div>
+<button aria-label="הוסף למועדפים" class="absolute top-3 left-3 z-10 text-primary/70 hover:text-primary transition-colors p-1 bg-surface/80 rounded-full">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<!-- Garment Image Tile (3:4 vertical editorial aspect) -->
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="חליפת שבת שחורה 2 חלקים Super 130'S" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A distinguished, pristine black tailored bespoke men's two-piece suit crafted from ultra-fine Super 130's wool, displayed on an elegant minimalist mannequin against an editorial gallery studio wall. The styling evokes strict European luxury menswear with ultra-clean, razor-sharp lapels and a refined matte black texture. Ambient soft directional spotlighting casts dramatic, subtle shadows, highlighting the garment's fluid drape and sartorial precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB36VPmlWmuk3YhFva7swN22-xHRjXmQMduxs2swYsasbvpwtTdDep--M43IuGO2YloqTje56WA4nluZTlIHV5A4Xa8-1riSd1_fv-0I6AlIIdMObrKu-RPPTEwKxJ-Cg6st4JvS3pMCCLA3a1qlMZ0Dg-Q9oLErar8-801jnH1_APO06TIDErizdiyBTWTSflAf7wChRrT-mRTVOPikE5tkGKhxYqesZoE9uXdPMm2ehtUDJxI0LMv">
+<!-- Slide Up Quick Add Drawer -->
+<div class="absolute inset-x-0 bottom-0 p-3 bg-surface/95 backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-2 border-t border-outline-variant/40">
+<span class="text-[11px] font-label-caps text-secondary text-center uppercase tracking-wider">בחירת מידה מהירה</span>
+<div class="flex justify-center gap-1">
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">46</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">48</button>
+<button class="w-8 h-8 text-xs font-label-price border border-primary bg-primary text-surface font-bold transition-colors">50</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">52</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">54</button>
+</div>
+<button class="w-full bg-primary text-surface py-2 text-xs font-label-caps tracking-widest uppercase hover:bg-surface hover:text-primary hover:border hover:border-primary transition-all">
+              הוספה מהירה לסל
+            </button>
+</div>
+</div>
+<!-- Meta Information -->
+<div class="p-4 flex flex-col flex-grow justify-between gap-3">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-headline-sm text-sm text-primary font-bold">חליפת שבת Super 130'S</h2>
+<span class="font-label-price text-sm text-primary font-bold">₪890</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">2 חלקים | גזרה מחמיאה | שחור מט עמוק</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-[11px] text-secondary">
+<span class="">גזרה: Regular / Slim</span>
+<span class="text-primary font-medium">זמין במלאי</span>
+</div>
+</div>
+</article>
+<!-- Item 2: חולצת שרוול ארוך Non-Iron Twill -->
+<article class="group flex flex-col relative bg-surface-container-lowest border border-outline-variant/40">
+<!-- Badge -->
+<div class="absolute top-3 right-3 z-10 flex flex-col gap-1 items-start">
+<span class="bg-primary text-surface text-[10px] font-label-caps px-2 py-0.5 tracking-wider uppercase">בד שאינו מתקמט</span>
+<span class="bg-tertiary-fixed text-tertiary text-[10px] font-label-caps px-2 py-0.5 font-bold">מבצע 3 ב-₪450</span>
+</div>
+<button aria-label="הוסף למועדפים" class="absolute top-3 left-3 z-10 text-primary/70 hover:text-primary transition-colors p-1 bg-surface/80 rounded-full">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="חולצת שרוול ארוך Non-Iron Twill" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A pristine crisp snow-white button-down men's dress shirt crafted from luxury Non-Iron Twill weave Egyptian cotton, styled neatly folded and laid out on a calm slate surface. The studio composition features architectural lines, high-contrast monochrome lighting, and razor-sharp collar detail with pearlescent buttons reflecting soft bright light. The overall mood conveys pure sartorial discipline and executive perfection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzhkae-w-liqEexd6nLHa_sTfmruTqVSx-1XMAYoDx0VQGpuKLc7N_rn3swYJIqBKd7U78dRFtaxB0MNxGtUYzbG-thy_bCeHK6U1kQKqSgxwNSoXE_X2XbN2nahiVEr56bS59rbb92pRGqjuHhw3Ha8UnGiFArqM6TE1Rad835a3cIieKtzv6-7rSK-nMKPLCzmR4pFVBdfrIBzsYJyhijsQktPxPnLBH3mKz7p5OQn5ynos_AdsW">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-surface/95 backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-2 border-t border-outline-variant/40">
+<span class="text-[11px] font-label-caps text-secondary text-center uppercase tracking-wider">בחירת צווארון ומידה</span>
+<div class="flex justify-center gap-1">
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">15</button>
+<button class="w-8 h-8 text-xs font-label-price border border-primary bg-primary text-surface font-bold transition-colors">15.5</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">16</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">16.5</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">17</button>
+</div>
+<button class="w-full bg-primary text-surface py-2 text-xs font-label-caps tracking-widest uppercase hover:bg-surface hover:text-primary hover:border hover:border-primary transition-all">
+              הוספה מהירה לסל
+            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between gap-3">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-headline-sm text-sm text-primary font-bold">חולצת Non-Iron Twill</h2>
+<div>
+<span class="font-label-price text-sm text-primary font-bold">₪189</span>
+<span class="text-[11px] text-secondary line-through mr-1">₪220</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">100% כותנה מצרית | אריגת טוויל כפולה | לבן אופטי</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-[11px] text-secondary">
+<span class="">מבצע כמות בהוספת 3 חולצות</span>
+<span class="text-primary font-medium">עמיד 72 שעות</span>
+</div>
+</div>
+</article>
+<!-- Item 3: מכנסי אלגנט סטרץ' שחור פחם -->
+<article class="group flex flex-col relative bg-surface-container-lowest border border-outline-variant/40">
+<div class="absolute top-3 right-3 z-10 flex flex-col gap-1 items-start">
+<span class="bg-primary text-surface text-[10px] font-label-caps px-2 py-0.5 tracking-wider uppercase">בד שאינו מתקמט</span>
+<span class="bg-surface-container-low text-primary text-[10px] font-label-caps px-2 py-0.5 border border-outline-variant/40">גזרה ישיבתית</span>
+</div>
+<button aria-label="הוסף למועדפים" class="absolute top-3 left-3 z-10 text-primary/70 hover:text-primary transition-colors p-1 bg-surface/80 rounded-full">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="מכנסי אלגנט סטרץ' שחור פחם" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High-end editorial fashion photography of charcoal black tailored stretch dress trousers. The garment is impeccably pressed with a razor-sharp permanent center crease, displayed upright against a neutral, warm-sand architectural studio backdrop. Delicate light illuminates the premium wool-blend texture, subtle flex-waistband stitching, and immaculate minimalist hemline, portraying understated luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBNNL6lu8xQMNLQJvSCoJFmlrhz95D8jWtfmsj0XhtP_xX-NU1aA6rWLg471we0RWcQpGIEwLDLB05GNfLqYltFSZ4aDzm3GkGe3xR2KHQMA8FpZRBvIUqFqdOgMwnFnyyH3ma9O6viEEoYJ6bkFBue7wlVa9180AEv6jBgZ9qTg8G4yz5Pw-VO7sLhWnJtgiXSLiPA4IW6_gir5cPZaND_cDcPhc_bVmU0sVlYAtBCOEq3L3dIXuK">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-surface/95 backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-2 border-t border-outline-variant/40">
+<span class="text-[11px] font-label-caps text-secondary text-center uppercase tracking-wider">בחירת מידה (מידות אירופאיות)</span>
+<div class="flex justify-center gap-1">
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">40</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">42</button>
+<button class="w-8 h-8 text-xs font-label-price border border-primary bg-primary text-surface font-bold transition-colors">44</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">46</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">48</button>
+</div>
+<button class="w-full bg-primary text-surface py-2 text-xs font-label-caps tracking-widest uppercase hover:bg-surface hover:text-primary hover:border hover:border-primary transition-all">
+              הוספה מהירה לסל
+            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between gap-3">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-headline-sm text-sm text-primary font-bold">מכנסי אלגנט סטרץ' פחם</h2>
+<span class="font-label-price text-sm text-primary font-bold">₪199</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">פס גיהוץ קבוע | גמישות מרבית לישיבה ממושכת</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-[11px] text-secondary">
+<span class="">תוספת סטרץ' 4%</span>
+<span class="text-primary font-medium">ללא צורך בגיהוץ</span>
+</div>
+</div>
+</article>
+<!-- Item 4: סירטוק ישיבתי צמר פרימיום -->
+<article class="group flex flex-col relative bg-surface-container-lowest border border-outline-variant/40">
+<div class="absolute top-3 right-3 z-10 flex flex-col gap-1 items-start">
+<span class="bg-primary text-surface text-[10px] font-label-caps px-2 py-0.5 tracking-wider uppercase">מהדורת פרימיום</span>
+<span class="bg-surface-container-low text-primary text-[10px] font-label-caps px-2 py-0.5 border border-outline-variant/40">תפירת יד</span>
+</div>
+<button aria-label="הוסף למועדפים" class="absolute top-3 left-3 z-10 text-primary/70 hover:text-primary transition-colors p-1 bg-surface/80 rounded-full">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="סירטוק ישיבתי צמר פרימיום" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An austere, elegant black wool frock coat (sirtuk) with classic tailored long silhouette and structured shoulders. The garment hangs naturally in an avant-garde editorial studio with pure obsidian and charcoal backdrop tones. Directional ambient lighting highlights the rich matte texture of the pure European worsted wool, deep back vent pleats, and silk lining, blending traditional Hasidic rabbinic tailoring with contemporary luxury runway aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC0czVcetOsepMAyZIahcDkLZdO790atedlg3-b7x7rsJ_0v9y_bHIbMdTV97l60P3_NKSZmEurOoMQkVLEX0PwqSVzJl2OEs0ljLtn9YHruCzsPfvZuAwACGQ13yicyl48s89VQWw8Vor_awm_gZF8aTiJhiYfTRR-ROKIs8tmeR73UkIorxoJuNymZWgWPBvoEOIOUuhXgNgJkoHojk18iQtZRhSPcXCQy7J00MzAqbS7CzeC326">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-surface/95 backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-2 border-t border-outline-variant/40">
+<span class="text-[11px] font-label-caps text-secondary text-center uppercase tracking-wider">בחירת אורך ומידה</span>
+<div class="flex justify-center gap-1">
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">48R</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">50R</button>
+<button class="w-8 h-8 text-xs font-label-price border border-primary bg-primary text-surface font-bold transition-colors">50L</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">52L</button>
+</div>
+<button class="w-full bg-primary text-surface py-2 text-xs font-label-caps tracking-widest uppercase hover:bg-surface hover:text-primary hover:border hover:border-primary transition-all">
+              הוספה מהירה לסל
+            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between gap-3">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-headline-sm text-sm text-primary font-bold">סירטוק ישיבתי פרימיום</h2>
+<span class="font-label-price text-sm text-primary font-bold">₪1,150</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">100% צמר אנגלי קל משקל | גזרה מלכותית</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-[11px] text-secondary">
+<span class="">בטנת משי נושמת</span>
+<span class="text-primary font-medium">כולל תיק נשיאה מהודר</span>
+</div>
+</div>
+</article>
+<!-- Item 5: נעלי שרוכים עור איטלקי "דרבי דרס" -->
+<article class="group flex flex-col relative bg-surface-container-lowest border border-outline-variant/40">
+<div class="absolute top-3 right-3 z-10 flex flex-col gap-1 items-start">
+<span class="bg-primary text-surface text-[10px] font-label-caps px-2 py-0.5 tracking-wider uppercase">עור איטלקי מלא</span>
+<span class="bg-surface-container-low text-primary text-[10px] font-label-caps px-2 py-0.5 border border-outline-variant/40">סוליה אולטרה-לייט</span>
+</div>
+<button aria-label="הוסף למועדפים" class="absolute top-3 left-3 z-10 text-primary/70 hover:text-primary transition-colors p-1 bg-surface/80 rounded-full">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="נעלי שרוכים עור איטלקי דרבי דרס" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A pair of impeccably polished jet-black Italian calfskin leather Derby dress shoes arranged diagonally on a textured pale grey stone pedestal. The studio lighting emphasizes the sleek, aerodynamic shape, waxed round laces, subtle Goodyear-welted stitching, and lustrous mirror-gloss toe caps, framed by clean high-fashion negative space with a modern Zara-like editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZGaKA1hGAW5ndY5ZEemNoFsqF2YKihfPTRqnVtoiFo_nlNvakJTzpM38fTP5H-ZPcBcxH5fqVBtYzG5J-GBAZq69jRir-2RFdnVH74aWSZ82PMgzJnZU9mx8JXxab58Qk1GTrtlU1Q5I-p3IoSQhVkTIq1oPVlXvJcn_7bVcDFM_lYUwlMOjzD4_t15jFOR-enI0LSswY2AYC2XHSTO9J21P4ydmR_pB_ntTvMi8EZu33L1SmweG_">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-surface/95 backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-2 border-t border-outline-variant/40">
+<span class="text-[11px] font-label-caps text-secondary text-center uppercase tracking-wider">בחירת מידת נעל</span>
+<div class="flex justify-center gap-1">
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">41</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">42</button>
+<button class="w-8 h-8 text-xs font-label-price border border-primary bg-primary text-surface font-bold transition-colors">43</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">44</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">45</button>
+</div>
+<button class="w-full bg-primary text-surface py-2 text-xs font-label-caps tracking-widest uppercase hover:bg-surface hover:text-primary hover:border hover:border-primary transition-all">
+              הוספה מהירה לסל
+            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between gap-3">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-headline-sm text-sm text-primary font-bold">נעלי דרבי עור איטלקי</h2>
+<span class="font-label-price text-sm text-primary font-bold">₪340</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">סוליית גומי בולמת זעזועים להליכה ממושכת</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-[11px] text-secondary">
+<span class="">רפידה אורתופדית נשלפת</span>
+<span class="text-primary font-medium">לשבת ולסדר</span>
+</div>
+</div>
+</article>
+<!-- Item 6: עניבת משי שחורה ארוגה -->
+<article class="group flex flex-col relative bg-surface-container-lowest border border-outline-variant/40">
+<div class="absolute top-3 right-3 z-10 flex flex-col gap-1 items-start">
+<span class="bg-primary text-surface text-[10px] font-label-caps px-2 py-0.5 tracking-wider uppercase">100% משי טהור</span>
+</div>
+<button aria-label="הוסף למועדפים" class="absolute top-3 left-3 z-10 text-primary/70 hover:text-primary transition-colors p-1 bg-surface/80 rounded-full">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="עניבת משי שחורה ארוגה" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious 100% pure woven black silk necktie draped gracefully over a minimalist polished dark marble block. Close-up high-definition photography reveals the subtle micro-jacquard texture and deep matte obsidian sheen of the fabric. Soft diffuse gallery lighting creates sharp contrast against an off-white architectural background, highlighting European couture finishing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAoPQ0x_yCaB8BcECUraZ6dHs3t7avDTQGL0Oj-85iQNBt6hlKcWppezaa2zSulfCsP3ZUmBEvU1UtYP43gSwwIho-LNMVMKJQNjRqAtIQABJtYgidXpcN2uCmdF23GmsAI0BUEMdy7nE__Cme-Yn-vuMNGtgdZqbr0yTTA4Inz8aRsGrGl41l_A7vw4lHa8P5vJO3T9nx1-4dmBxIM6F6BU7R4FKxzlgqNIlkfQ7-Xw1z6zbWEmlT">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-surface/95 backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-2 border-t border-outline-variant/40">
+<span class="text-[11px] font-label-caps text-secondary text-center uppercase tracking-wider">רוחב קלאסי 7 ס״מ</span>
+<button class="w-full bg-primary text-surface py-2 text-xs font-label-caps tracking-widest uppercase hover:bg-surface hover:text-primary hover:border hover:border-primary transition-all">
+              הוספה מהירה לסל
+            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between gap-3">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-headline-sm text-sm text-primary font-bold">עניבת משי שחורה ארוגה</h2>
+<span class="font-label-price text-sm text-primary font-bold">₪95</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">אריגת ז'קארד עדינה | קשר יציב שאינו מחליק</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-[11px] text-secondary">
+<span class="">אורך תקני: 148 ס"מ</span>
+<span class="text-primary font-medium">עמידות גבוהה לקמטים</span>
+</div>
+</div>
+</article>
+<!-- Item 7: מארז 5 זוגות גרבי כותנה מחוזקות -->
+<article class="group flex flex-col relative bg-surface-container-lowest border border-outline-variant/40">
+<div class="absolute top-3 right-3 z-10 flex flex-col gap-1 items-start">
+<span class="bg-primary text-surface text-[10px] font-label-caps px-2 py-0.5 tracking-wider uppercase">מארז חיסכון</span>
+<span class="bg-surface-container-low text-primary text-[10px] font-label-caps px-2 py-0.5 border border-outline-variant/40">עקב וחרטום מחוזקים</span>
+</div>
+<button aria-label="הוסף למועדפים" class="absolute top-3 left-3 z-10 text-primary/70 hover:text-primary transition-colors p-1 bg-surface/80 rounded-full">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="מארז 5 זוגות גרבי כותנה מחוזקות" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A curated bundle of five pairs of jet-black combed cotton dress socks, rolled tightly with luxury paper belly-bands embossed in minimalist typography, resting on a clean ivory tray. The photography is sharp and bright, utilizing studio strobe lighting to emphasize the dense, smooth knit, reinforced heel stitching, and refined matte texture designed for long seminary study sessions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyN6KwsXJyXwokFLiQ3dAen92_As7M5t3yF3zW6yE8IrE5a1JDvSEmPeUktDw7Ft7rEMsAKfBSrnzH9v1knbDp9d_uSzVlQnMj6Ws10GhtUeiwUcC5-5Qi503S7KoNQSF51v4ezxEI9tb23ejzIrZUpidInesHPkjR6gQu7PMBSwMcp-LPHRsqj4lxamkN6Uk5VO1kiOidFeBzhlKDQTGhNLklGx098a6oshJW9FwQ7sQWP1JXGWQV">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-surface/95 backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-2 border-t border-outline-variant/40">
+<span class="text-[11px] font-label-caps text-secondary text-center uppercase tracking-wider">בחירת מידת גרב</span>
+<div class="flex justify-center gap-2">
+<button class="px-3 py-1 text-xs font-label-price border border-primary bg-primary text-surface font-bold">39-42</button>
+<button class="px-3 py-1 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">43-46</button>
+</div>
+<button class="w-full bg-primary text-surface py-2 text-xs font-label-caps tracking-widest uppercase hover:bg-surface hover:text-primary hover:border hover:border-primary transition-all">
+              הוספה מהירה לסל
+            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between gap-3">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-headline-sm text-sm text-primary font-bold">מארז 5 זוגות גרבי כותנה</h2>
+<span class="font-label-price text-sm text-primary font-bold">₪79</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">כותנה סרוקה נושמת | גומייה אלסטית שאינה לוחצת</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-[11px] text-secondary">
+<span class="">5 זוגות בשחור קלאסי</span>
+<span class="text-primary font-medium">עמידות במכונה</span>
+</div>
+</div>
+</article>
+<!-- Item 8: סט 3 גופיות כותנה סרוקה -->
+<article class="group flex flex-col relative bg-surface-container-lowest border border-outline-variant/40">
+<div class="absolute top-3 right-3 z-10 flex flex-col gap-1 items-start">
+<span class="bg-primary text-surface text-[10px] font-label-caps px-2 py-0.5 tracking-wider uppercase">100% כותנה</span>
+<span class="bg-surface-container-low text-primary text-[10px] font-label-caps px-2 py-0.5 border border-outline-variant/40">ללא תפרים מציקים</span>
+</div>
+<button aria-label="הוסף למועדפים" class="absolute top-3 left-3 z-10 text-primary/70 hover:text-primary transition-colors p-1 bg-surface/80 rounded-full">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="סט 3 גופיות כותנה סרוקה" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, geometric presentation of three stacked optic white combed-cotton men's sleeveless undershirts, neatly squared and resting on a raw linen fabric backdrop. Soft directional daylight casts delicate natural shadows, accentuating the ultra-fine ribbed neckline, seamless side construction, and soft breathable luxury yarn with a minimal high-end European catalog aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd7Vi53GpFqPqmqxrY8pMJNk5cgWL_TSYsXDQZeAWCDoZTHV_QJ5VrmWy4dQHmhr2b64PZW49K4T0HgQ0D7-Q0ob25s6pFr6kS-J5kxOyACYn694KGSxxxnwnOhCDAEHeeGBytADWrKkaHc_CWDAZ7mEgS2tQwg5z4vdfCdyAMmVimok8kTaKN6MC-6MGwohXj2ekc0Ruosetjw6q4Mnr414XCpnp7bgvZPSaT--WDQ2ljn0ItvnJY">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-surface/95 backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col gap-2 border-t border-outline-variant/40">
+<span class="text-[11px] font-label-caps text-secondary text-center uppercase tracking-wider">בחירת מידה</span>
+<div class="flex justify-center gap-1">
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">S</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">M</button>
+<button class="w-8 h-8 text-xs font-label-price border border-primary bg-primary text-surface font-bold transition-colors">L</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">XL</button>
+<button class="w-8 h-8 text-xs font-label-price border border-outline-variant hover:border-primary hover:bg-primary hover:text-surface transition-colors">XXL</button>
+</div>
+<button class="w-full bg-primary text-surface py-2 text-xs font-label-caps tracking-widest uppercase hover:bg-surface hover:text-primary hover:border hover:border-primary transition-all">
+              הוספה מהירה לסל
+            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between gap-3">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-headline-sm text-sm text-primary font-bold">סט 3 גופיות כותנה סרוקה</h2>
+<span class="font-label-price text-sm text-primary font-bold">₪110</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">ספיגה מושלמת | מפתח צוואר מותאם לחולצה מכופתרת</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between text-[11px] text-secondary">
+<span class="">גזרה ארוכה (לא יוצאת מהמכנסיים)</span>
+<span class="text-primary font-medium">כותנה היפואלרגנית</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Editorial Callout: Dorm Pack & Non-Iron Bundle Rack -->
+<section class="mt-20 border border-primary bg-surface p-8 md:p-12 relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 space-y-4">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">חבילת זמן אלול / חורף מרוכזת</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+            מארז "סדר מלא": 5 חולצות Non-Iron + 2 מכנסי אלגנט
+          </h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+            הזמינו חבילת ישיבה שלמה בסנכרון מידות מיידי. כל החולצות נשארות חלקות ונוקשות גם לאחר יום לימודים ממושך בהיכל, בכביסה ללא צורך בגיהוץ כלל.
+          </p>
+<div class="flex flex-wrap gap-4 pt-2">
+<span class="inline-flex items-center gap-1.5 text-xs text-primary font-medium">
+<span class="material-symbols-outlined text-sm">check</span> סנכרון מידות גורף
+            </span>
+<span class="inline-flex items-center gap-1.5 text-xs text-primary font-medium"><span class="material-symbols-outlined text-sm">check</span> איסוף עצמי מהיר או מנקודת החלוקה בישיבה</span>
+<span class="inline-flex items-center gap-1.5 text-xs text-primary font-medium">
+<span class="material-symbols-outlined text-sm">check</span> אפשרות לפיצול צבעים
+            </span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-center border-t lg:border-t-0 lg:border-r border-outline-variant pt-6 lg:pt-0 lg:pr-8 gap-4">
+<div class="text-right lg:text-left">
+<span class="text-xs text-secondary block">מחיר מארז מיוחד:</span>
+<span class="font-display-hero text-3xl md:text-4xl font-black text-primary">₪980</span>
+<span class="text-xs text-secondary line-through block">₪1,343 במחיר נפרד</span>
+</div>
+<button class="bg-primary text-surface px-8 py-3 text-xs font-label-caps tracking-widest uppercase hover:bg-surface hover:text-primary hover:border hover:border-primary transition-all w-full lg:w-auto text-center font-bold">
+            הרכבת המארז עכשיו
+          </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Specialized Yeshiva Institutional Services Bar (3 Anchors) -->
+<section class="bg-surface-container-low border-t border-b border-outline-variant py-14">
+<div class="max-w-7xl mx-auto px-space-md md:px-space-lg grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="flex items-start gap-4 p-4 border-r-2 border-primary"><div class="p-3 bg-surface border border-outline-variant/60"><span class="material-symbols-outlined text-2xl text-primary">storefront</span></div><div class="space-y-1"><h3 class="font-headline-sm text-headline-sm text-primary">איסוף עצמי וחלוקה בישיבה</h3><p class="font-body-md text-body-md text-secondary">איסוף עצמי מהסניפים או מנקודות חלוקה מרוכזות בהיכל הישיבה בתיאום מול נציג הוועד, ללא צורך ביציאה ממתחם הלימודים.</p></div></div>
+<!-- Feature 2 -->
+<div class="flex items-start gap-4 p-4 border-r-2 border-primary"><div class="p-3 bg-surface border border-outline-variant/60"><span class="material-symbols-outlined text-2xl text-primary">content_cut</span></div><div class="space-y-1"><h3 class="font-headline-sm text-headline-sm text-primary">חייט במקום</h3><p class="font-body-md text-body-md text-secondary">חייט במקום לביצוע מכפלות והצרות בלבד בתיאום מראש עם ועד הישיבה, לשירות מהיר ומיידי.</p></div></div>
+<!-- Feature 3 -->
+<div class="flex items-start gap-4 p-4 border-r-2 border-primary"><div class="p-3 bg-surface border border-outline-variant/60"><span class="material-symbols-outlined text-2xl text-primary">published_with_changes</span></div><div class="space-y-1"><h3 class="font-headline-sm text-headline-sm text-primary">החלפת מידות חינם</h3><p class="font-body-md text-body-md text-secondary">המידה אינה מדויקת? ניתן להחליף את הפריט בנקודת החלוקה או מול נציג הוועד ללא שום עלות נוספת תוך 48 שעות.</p></div></div>
+</div>
+</section>
+<!-- Footer (Derived verbatim from Shared Components JSON) -->
+<footer class="w-full bg-primary-container dark:bg-primary-container text-surface dark:text-surface border-t border-outline-variant dark:border-outline-variant">
+<div class="w-full max-w-7xl mx-auto px-space-lg py-space-xl rtl">
+<!-- Top Grid: Brand & Institutional Navigation Links -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-on-primary-container/30">
+<!-- Brand Summary -->
+<div class="md:col-span-5 space-y-4">
+<span class="font-label-caps text-label-caps tracking-widest uppercase font-bold text-surface dark:text-surface text-2xl block">
+            BESPOCUT
+          </span>
+<p class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-container max-w-md leading-relaxed">
+            בית האופנה וההלבשה המחויטת לבני הישיבות והאברכים. תפירה עילית, עמידות גבוהה ומענה הלכתי מוקפד לשילוב מושלם בין יופי לכבוד התורה.
+          </p>
+<div class="pt-2 flex items-center gap-4 text-xs font-label-caps text-on-primary-container">
+<span class="">ירושלים • בני ברק • מודיעין עילית • בית שמש</span>
+</div>
+</div>
+<!-- Links Columns from Shared JSON -->
+<div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6 font-body-md text-body-md">
+<div class="space-y-3">
+<span class="block font-label-caps text-xs text-surface uppercase tracking-wider font-bold">שירות וסיוע</span>
+<ul class="space-y-2">
+<li class="">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+                  שירות לקוחות
+                </a>
+</li>
+<li class="">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+                  מדריך מידות
+                </a>
+</li>
+<li class="">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+                  סניפים ונקודות חלוקה
+                </a>
+</li>
+</ul>
+</div>
+<div class="space-y-3">
+<span class="block font-label-caps text-xs text-surface uppercase tracking-wider font-bold">ישיבות וועדים</span>
+<ul class="space-y-2">
+<li class="">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+                  ועדי ישיבות ומכירות מרוכזות
+                </a>
+</li>
+<li class="">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+                  הסדרי חנויות וסבסוד
+                </a>
+</li>
+<li class="">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+                  הסדרי נגישות
+                </a>
+</li>
+</ul>
+</div>
+<div class="space-y-3 col-span-2 sm:col-span-1">
+<span class="block font-label-caps text-xs text-surface uppercase tracking-wider font-bold">משפטי ומידע</span>
+<ul class="space-y-2">
+<li class="">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+                  תקנון האתר ומדיניות פרטיות
+                </a>
+</li>
+<li class="">
+<a class="text-on-primary-container dark:text-on-primary-container hover:text-surface transition-colors duration-200" href="#">
+                  אודות BESPOCUT
+                </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Bottom Bar: Exact Copyright String from JSON -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-primary-container dark:text-on-primary-container">
+<p class="font-body-md text-body-md">
+          © 2025 BESPOCUT. מעמד ישיבתי. כל הזכויות שמורות.
+        </p>
+<div class="flex items-center gap-6">
+<span class="font-label-caps tracking-widest uppercase text-[11px]">CRAFTED WITH ARCHITECTURAL RIGOR</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive Logic for Size Button Selection & Cart Badge update -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle active states on size selectors
+      const sizeButtons = document.querySelectorAll('button[class*="font-label-price"]');
+      sizeButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const parentGroup = btn.parentElement;
+          if (parentGroup) {
+            parentGroup.querySelectorAll('button').forEach(b => {
+              b.classList.remove('bg-primary', 'text-surface', 'border-primary', 'font-bold');
+              b.classList.add('border-outline-variant');
+            });
+            btn.classList.add('bg-primary', 'text-surface', 'border-primary', 'font-bold');
+            btn.classList.remove('border-outline-variant');
+          }
+        });
+      });
+    });
+  </script>
+
+
+
+
+</body></html>
