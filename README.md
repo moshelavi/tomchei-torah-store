@@ -2,11 +2,11 @@
 
 ## פרסום מקוון
 
-פרסום Sites מנוהל מתיקיית `.site-deploy` המקומית, בנפרד ממאגר המקור ב־GitHub. מזהה האתר: `appgprj_6aecd7bc97308191b6a5284c84a78754`. אין ליצור אתר נוסף בעת עדכון. מניפסט הפרסום נמצא ב־`.site-deploy/.openai/hosting.json` והתוכן הסטטי ב־`.site-deploy/dist`. לפני פרסום שינוי צריך לסנכרן את קובצי האתר והנכסים לתיקייה זו ולפעול לפי תהליך Sites עם אותו מזהה אתר.
+האתר מתפרסם דרך GitHub Pages משורש ענף `main`: https://moshelavi.github.io/tomchei-torah-store/ . לאחר שינוי בקטלוג יש להריץ `npm run build`, ולאחר מכן לבצע commit ו־push. קובץ `.nojekyll` מאפשר הגשה ישירה של הקבצים הסטטיים.
 
 ## תמונת פתיחה
 
-`entrance.js` ו־`entrance.css` מוסיפים לדף הבית תמונת המחשה של חנות ביגוד, עם שכבת זכוכית כחולה שקופה ומטושטשת והלוגו המקורי מעליה. התמונה ב־`assets/store-entrance.png` נוצרה באמצעות ImageGen המובנה; היא אינה צילום של החנות בפועל.
+`entrance.js` ו־`entrance.css` מוסיפים לדף הבית תמונת המחשה של חנות ביגוד, עם שכבה לבנה שקופה ומטושטשת והלוגו מעליה. התמונה ב־`assets/store-entrance.png` נוצרה באמצעות ImageGen המובנה; היא אינה צילום של החנות בפועל.
 
 Prompt: Photorealistic wide interior photograph of a modest men's clothing boutique in Jerusalem. Neatly hung white shirts, black/navy suits, black leather shoes and folded shirts on warm wood shelving. No people, logos or readable text. Natural warm daylight, entrance perspective, landscape 16:9; uncluttered central area for a separately implemented blue frosted-glass logo panel.
 
